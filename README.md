@@ -1,4 +1,5 @@
 # NULA
+Our code is adapted from https://github.com/SeiruGanki/Uniform-in-time-propagation-of-chaos-for-kinetic-mean-field-Langevin-dynamics
 
 Run UNLA and NLA.py and EM-UNLA.py first. 
 

@@ -1,0 +1,4 @@
+# Direct dependency versions used for the CPU checks; not the historical paper environment.
+torch==2.5.1
+numpy==2.1.2
+matplotlib==3.10.1

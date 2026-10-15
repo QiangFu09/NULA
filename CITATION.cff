@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying paper."
+type: software
+title: "Mean-field Underdamped Langevin Dynamics and its Spacetime Discretization: research code"
+repository-code: "https://github.com/QiangFu09/NULA"
+authors:
+  - family-names: Fu
+    given-names: Qiang
+preferred-citation:
+  type: conference-paper
+  title: "Mean-field Underdamped Langevin Dynamics and its Spacetime Discretization"
+  authors:
+    - family-names: Fu
+      given-names: Qiang
+    - family-names: Wilson
+      given-names: Ashia Camage
+  year: 2024
+  collection-title: "Proceedings of the 41st International Conference on Machine Learning"
+  url: "https://proceedings.mlr.press/v235/fu24g.html"

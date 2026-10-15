@@ -1,0 +1,24 @@
+name: checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  cpu-checks:
+    runs-on: ubuntu-latest
+    env:
+      MPLBACKEND: Agg
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          python-version: "3.12"
+      - run: uv venv
+      - run: uv pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+      - run: uv pip install -r requirements-tested.txt
+      - run: .venv/bin/python -m unittest discover -s tests -v
